@@ -1,0 +1,144 @@
+---
+title: "Aplicaciones de Manejo de Datos"
+author: '<p style="font-size:30px;color:#ffffff;text-shadow:2px 2px 2px #000;"> Gabriel Cabrera G. <br> Universidad de Chile</p>'
+output:
+  xaringan::moon_reader:
+    css: ["default", "css/my-theme.css", "css/my-fonts.css"]
+    seal: false 
+    lib_dir: libs
+    nature:
+      highlightStyle: solarized-light
+      highlightLines: true
+      countIncrementalSlides: false
+      beforeInit: "https://platform.twitter.com/widgets.js"
+      ratio: '16:9'
+    includes:
+      in_header: header.html 
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, 
+  comment = NA, dpi = 300, echo = FALSE,
+  fig.align = "center", out.width = "80%", cache = FALSE)
+library(tidyverse)
+library(wesanderson)
+library(gganimate)
+```
+
+class: title-slide, top, left
+background-image: url(img/esteban-lopez-482075-unsplash.jpg)
+background-size: cover
+
+
+# `r rmarkdown::metadata$title`
+
+### `r rmarkdown::metadata$author`
+
+.footnote[
+
+]
+
+---
+class: inverse, center, middle
+
+<img style="border-radius: 50%; border:3px solid #ffffff;" src="http://gcabrerag.rbind.io/img/glitch.gif" width="150px"/>
+
+# Me pueden encontrar...
+
+<a href="mailto:gcabrerag@fen.uchile.cl"><i class="fa fa-paper-plane fa-fw"></i>&nbsp;gcabrerag@fen.uchile.cl</a><br>
+<a href="https://gcabrerag.rbind.io/"><i class="fa fa-link fa-fw"></i>&nbsp; gcabrerag.rbind.io</a><br>
+<a href="https://twitter.com/GaboC_g"><i class="fa fa-twitter fa-fw"></i>&nbsp; @GaboC_g</a><br>
+<a href="http://github.com/GaboC_g"><i class="fa fa-github fa-fw"></i>&nbsp; @GaboC_g</a><br>
+<a href="http://pregrado.fen.uchile.cl/"><i class="fa fa-map-marker fa-fw"></i>&nbsp; Facultad de Economía & Negocios, Universidad de Chile </a>
+---
+class: middle
+
+<blockquote cite="http://www.worldwildlife.org/who/index.html">
+
+"With great power, comes great responsibility"
+
+<p align="right" style="font-size:20px"> Spiderman,<i> Amazing Fantasy #15 </i>.</p>
+
+</blockquote>
+
+---
+class: center, inverse, middle
+
+# Syllabus
+---
+# Información
+
+---
+# Descripción
+
+---
+# Evaluaciones
+
+---
+class: center, inverse, middle
+
+# ¿Por qué Python `r emo::ji("snake")`?
+
+
+---
+background-image: url(img/stars-bg.jpg)
+
+<br>
+<br>
+<div style="text-align: left; padding-top: 120px">
+<span style="color: #4ee; font-size: 250%;">
+Hace poco, poco tiempo, <br>
+en una galaxia no tan,<br> tan lejana...
+</div>
+</span>
+
+---
+# Lenguajes de programación 
+
+```{r, echo = FALSE, eval = TRUE, warning=FALSE, message=FALSE}
+if(!require("pacman")) install.packages("pacman")
+p_load("tidyverse", "highcharter", "shiny")
+
+git_data <- read_csv(here::here("00-intro/dataset/repositories_data.csv"))
+
+chart <- git_data %>% 
+            select(Language) %>% 
+            group_by(Language) %>% 
+            na.omit() %>% 
+            mutate(n = n()) %>% 
+            arrange(desc(n)) %>% 
+            filter(row_number(Language) == 1) 
+```
+
+```{r, echo = FALSE, eval = TRUE, warning=FALSE, message=FALSE}
+chart %>% 
+  hchart(type = "column", hcaes(x = "Language", y = "n"), colorByPoint = TRUE, name = "Repositorios") %>% 
+  hc_xAxis(title = list(text = "")) %>% 
+  hc_yAxis(title = list(text = "Nº Repositorios")) 
+```
+
+---
+# Top 5 Lenguajes de programación 
+
+```{r, echo = FALSE, eval = TRUE, warning=FALSE, message=FALSE}
+git_data <- read_csv(here::here("00-intro/dataset/repositories_data.csv"))
+
+pie <- git_data %>% 
+       select(Language) %>% 
+       group_by(Language) %>% 
+       na.omit() %>% 
+       mutate(n = n()) %>% 
+       arrange(desc(n)) %>% 
+       filter(row_number(Language) == 1) %>% 
+       head(5)
+```
+
+```{r, fig.width=10, fig.height=10}
+pie %>% 
+  hchart(type = "pie", hcaes(x = "Language", y = "n"), colorByPoint = TRUE, name = "Repositorios")
+```
+
+---
+background-image: url(img/adi-goldstein-mDinBvq1Sfg-unsplash.jpg)
+background-size: cover

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Aplicaciones de Manejo de Datos</title>
+    <meta charset="utf-8" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <script src="libs/jquery/jquery.min.js"></script>
+    <script src="libs/proj4js/proj4.js"></script>
+    <link href="libs/highcharts/css/motion.css" rel="stylesheet" />
+    <link href="libs/highcharts/css/htmlwdgtgrid.css" rel="stylesheet" />
+    <script src="libs/highcharts/highcharts.js"></script>
+    <script src="libs/highcharts/highcharts-3d.js"></script>
+    <script src="libs/highcharts/highcharts-more.js"></script>
+    <script src="libs/highcharts/modules/stock.js"></script>
+    <script src="libs/highcharts/modules/map.js"></script>
+    <script src="libs/highcharts/modules/annotations.js"></script>
+    <script src="libs/highcharts/modules/boost.js"></script>
+    <script src="libs/highcharts/modules/data.js"></script>
+    <script src="libs/highcharts/modules/drag-panes.js"></script>
+    <script src="libs/highcharts/modules/drilldown.js"></script>
+    <script src="libs/highcharts/modules/item-series.js"></script>
+    <script src="libs/highcharts/modules/offline-exporting.js"></script>
+    <script src="libs/highcharts/modules/overlapping-datalabels.js"></script>
+    <script src="libs/highcharts/modules/exporting.js"></script>
+    <script src="libs/highcharts/modules/export-data.js"></script>
+    <script src="libs/highcharts/modules/funnel.js"></script>
+    <script src="libs/highcharts/modules/heatmap.js"></script>
+    <script src="libs/highcharts/modules/treemap.js"></script>
+    <script src="libs/highcharts/modules/sankey.js"></script>
+    <script src="libs/highcharts/modules/solid-gauge.js"></script>
+    <script src="libs/highcharts/modules/streamgraph.js"></script>
+    <script src="libs/highcharts/modules/sunburst.js"></script>
+    <script src="libs/highcharts/modules/vector.js"></script>
+    <script src="libs/highcharts/modules/wordcloud.js"></script>
+    <script src="libs/highcharts/modules/xrange.js"></script>
+    <script src="libs/highcharts/modules/tilemap.js"></script>
+    <script src="libs/highcharts/modules/venn.js"></script>
+    <script src="libs/highcharts/modules/gantt.js"></script>
+    <script src="libs/highcharts/modules/timeline.js"></script>
+    <script src="libs/highcharts/modules/parallel-coordinates.js"></script>
+    <script src="libs/highcharts/plugins/grouped-categories.js"></script>
+    <script src="libs/highcharts/plugins/motion.js"></script>
+    <script src="libs/highcharts/plugins/multicolor_series.js"></script>
+    <script src="libs/highcharts/custom/reset.js"></script>
+    <script src="libs/highcharts/custom/symbols-extra.js"></script>
+    <script src="libs/highcharts/custom/text-symbols.js"></script>
+    <script src="libs/highchart-binding/highchart.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    
+    <script src="https://use.fontawesome.com/5235085b15.js"></script>
+    <link rel="stylesheet" href="css/my-theme.css" type="text/css" />
+    <link rel="stylesheet" href="css/my-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+class: title-slide, top, left
+background-image: url(img/esteban-lopez-482075-unsplash.jpg)
+background-size: cover
+
+
+# Aplicaciones de Manejo de Datos
+
+### &lt;p style="font-size:30px;color:#ffffff;text-shadow:2px 2px 2px #000;"&gt; Gabriel Cabrera G. &lt;br&gt; Universidad de Chile&lt;/p&gt;
+
+.footnote[
+
+]
+
+---
+class: inverse, center, middle
+
+&lt;img style="border-radius: 50%; border:3px solid #ffffff;" src="http://gcabrerag.rbind.io/img/glitch.gif" width="150px"/&gt;
+
+# Me pueden encontrar...
+
+&lt;a href="mailto:gcabrerag@fen.uchile.cl"&gt;&lt;i class="fa fa-paper-plane fa-fw"&gt;&lt;/i&gt;&amp;nbsp;gcabrerag@fen.uchile.cl&lt;/a&gt;&lt;br&gt;
+&lt;a href="https://gcabrerag.rbind.io/"&gt;&lt;i class="fa fa-link fa-fw"&gt;&lt;/i&gt;&amp;nbsp; gcabrerag.rbind.io&lt;/a&gt;&lt;br&gt;
+&lt;a href="https://twitter.com/GaboC_g"&gt;&lt;i class="fa fa-twitter fa-fw"&gt;&lt;/i&gt;&amp;nbsp; @GaboC_g&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://github.com/GaboC_g"&gt;&lt;i class="fa fa-github fa-fw"&gt;&lt;/i&gt;&amp;nbsp; @GaboC_g&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://pregrado.fen.uchile.cl/"&gt;&lt;i class="fa fa-map-marker fa-fw"&gt;&lt;/i&gt;&amp;nbsp; Facultad de Economía &amp; Negocios, Universidad de Chile &lt;/a&gt;
+---
+class: middle
+
+&lt;blockquote cite="http://www.worldwildlife.org/who/index.html"&gt;
+
+"With great power, comes great responsibility"
+
+&lt;p align="right" style="font-size:20px"&gt; Spiderman,&lt;i&gt; Amazing Fantasy #15 &lt;/i&gt;.&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+---
+class: center, inverse, middle
+
+# Syllabus
+---
+# Información
+
+---
+# Descripción
+
+---
+# Evaluaciones
+
+---
+class: center, inverse, middle
+
+# ¿Por qué Python 🐍?
+
+
+---
+background-image: url(img/stars-bg.jpg)
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;div style="text-align: left; padding-top: 120px"&gt;
+&lt;span style="color: #4ee; font-size: 250%;"&gt;
+Hace poco, poco tiempo, &lt;br&gt;
+en una galaxia no tan,&lt;br&gt; tan lejana...
+&lt;/div&gt;
+&lt;/span&gt;
+
+---
+# Lenguajes de programación 
+
+
+
+<div id="htmlwidget-179946b074f5522efa99" style="width:100%;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-179946b074f5522efa99">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":"Nº Repositorios"},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"group":"group","data":[{"Language":"JavaScript","n":338,"y":338,"name":"JavaScript"},{"Language":"Java","n":67,"y":67,"name":"Java"},{"Language":"Python","n":63,"y":63,"name":"Python"},{"Language":"Ruby","n":44,"y":44,"name":"Ruby"},{"Language":"Objective-C","n":43,"y":43,"name":"Objective-C"},{"Language":"Go","n":39,"y":39,"name":"Go"},{"Language":"HTML","n":34,"y":34,"name":"HTML"},{"Language":"CSS","n":30,"y":30,"name":"CSS"},{"Language":"C++","n":28,"y":28,"name":"C++"},{"Language":"Swift","n":28,"y":28,"name":"Swift"},{"Language":"C","n":26,"y":26,"name":"C"},{"Language":"PHP","n":23,"y":23,"name":"PHP"},{"Language":"Shell","n":20,"y":20,"name":"Shell"},{"Language":"TypeScript","n":15,"y":15,"name":"TypeScript"},{"Language":"Vim script","n":14,"y":14,"name":"Vim script"},{"Language":"C#","n":9,"y":9,"name":"C#"},{"Language":"CoffeeScript","n":7,"y":7,"name":"CoffeeScript"},{"Language":"Vue","n":5,"y":5,"name":"Vue"},{"Language":"Scala","n":5,"y":5,"name":"Scala"},{"Language":"Lua","n":4,"y":4,"name":"Lua"},{"Language":"Objective-C++","n":3,"y":3,"name":"Objective-C++"},{"Language":"Clojure","n":3,"y":3,"name":"Clojure"},{"Language":"Jupyter Notebook","n":3,"y":3,"name":"Jupyter Notebook"},{"Language":"TeX","n":3,"y":3,"name":"TeX"},{"Language":"Elixir","n":3,"y":3,"name":"Elixir"},{"Language":"Haskell","n":3,"y":3,"name":"Haskell"},{"Language":"Rust","n":2,"y":2,"name":"Rust"},{"Language":"OCaml","n":2,"y":2,"name":"OCaml"},{"Language":"PowerShell","n":2,"y":2,"name":"PowerShell"},{"Language":"Perl","n":2,"y":2,"name":"Perl"},{"Language":"Assembly","n":1,"y":1,"name":"Assembly"},{"Language":"Rascal","n":1,"y":1,"name":"Rascal"},{"Language":"Emacs Lisp","n":1,"y":1,"name":"Emacs Lisp"},{"Language":"Batchfile","n":1,"y":1,"name":"Batchfile"},{"Language":"Matlab","n":1,"y":1,"name":"Matlab"},{"Language":"PureBasic","n":1,"y":1,"name":"PureBasic"},{"Language":"Julia","n":1,"y":1,"name":"Julia"},{"Language":"Crystal","n":1,"y":1,"name":"Crystal"},{"Language":"Kotlin","n":1,"y":1,"name":"Kotlin"}],"type":"column","colorByPoint":true,"name":"Repositorios"}],"xAxis":{"type":"category","title":{"text":""}}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+
+---
+# Top 5 Lenguajes de programación 
+
+
+
+<div id="htmlwidget-df624fbf58e73021fa06" style="width:100%;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-df624fbf58e73021fa06">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":"n"},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"group":"group","data":[{"Language":"JavaScript","n":338,"y":338,"name":"JavaScript"},{"Language":"Java","n":67,"y":67,"name":"Java"},{"Language":"Python","n":63,"y":63,"name":"Python"},{"Language":"Ruby","n":44,"y":44,"name":"Ruby"},{"Language":"Objective-C","n":43,"y":43,"name":"Objective-C"}],"type":"pie","colorByPoint":true,"name":"Repositorios"}],"xAxis":{"type":"category","title":{"text":"Language"},"categories":null}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+
+---
+background-image: url(img/adi-goldstein-mDinBvq1Sfg-unsplash.jpg)
+background-size: cover
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "solarized-light",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
