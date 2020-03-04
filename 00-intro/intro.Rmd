@@ -1,43 +1,168 @@
 ---
 title: "Aplicaciones de Manejo de Datos"
-author: '<p style="font-size:30px;color:#ffffff;text-shadow:2px 2px 2px #000;"> Gabriel Cabrera G. <br> Universidad de Chile</p>'
+author: "Gabriel Cabrera G."
+date: "`r Sys.Date()`"
 output:
   xaringan::moon_reader:
-    css: ["default", "css/my-theme.css", "css/my-fonts.css"]
-    seal: false 
+    seal: false
     lib_dir: libs
+    css: xaringan-themer.css
     nature:
+      titleSlideClass: ["bottom", "left"]
+      slideNumberFormat: "%current%/%total%"
       highlightStyle: solarized-light
       highlightLines: true
-      countIncrementalSlides: false
+      ratio: "16:9"
       beforeInit: "https://platform.twitter.com/widgets.js"
-      ratio: '16:9'
+      countIncrementalSlides: true
     includes:
-      in_header: header.html 
+      in_header: header.html
 ---
+class: center middle hide-count
+background-color: #fffff0
+background-position: left
+
+<link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive|Karla|Montserrat|Open+Sans|Quattrocento|Raleway&display=swap" rel="stylesheet">
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
-knitr::opts_chunk$set(warning = FALSE, message = FALSE, 
-  comment = NA, dpi = 300, echo = FALSE,
-  fig.align = "center", out.width = "80%", cache = FALSE)
-library(tidyverse)
-library(wesanderson)
-library(gganimate)
+knitr::opts_chunk$set(highlight = TRUE)
 ```
 
-class: title-slide, top, left
-background-image: url(img/esteban-lopez-482075-unsplash.jpg)
-background-size: cover
+```{r xaringan-themer, include=FALSE}
+library(fontawesome)
+library(xaringanthemer)
+mono_light(
+  white_color = "#fffff0", # color background 
+  header_font_google = google_font("Cedarville Cursive", "600"),
+  text_font_google = google_font("Karla", "300", "300i"),
+  code_font_google = google_font("Fira Code"),
+  text_font_size = "24px",
+  code_font_size = "0.85em"
+)
 
+opaque_box <- function(x) {
+  htmltools::tags$div(
+    class = "f1 bg-white-o90 pa6 shadow-3 h-75",
+    htmltools::tags$h1(htmltools::tags$em(x))
+  )
+}
+
+```
+
+```{r xaringan-animate-all, echo=FALSE}
+xaringanExtra::use_animate_all("fade")
+xaringanExtra::use_tachyons()
+xaringanExtra::use_text_poster()
+```
+
+```{css echo=FALSE}
+a, a > code {
+  color: #D55E00FF;
+  text-decoration: none;
+}
+
+em {
+  color: #D55E00FF;
+  font-style: normal;
+}
+
+del {
+  color: #E5E5E5;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.inverse del {
+  color: #6C7B7F;
+}
+
+.bg-white-o90{
+   background-color: rgba(255, 255, 255, 0.9);
+}
+
+.large { font-size: 175% }
+
+.hide-count .remark-slide-number {
+  display: none;
+}
+
+.text-poster {
+	font-family: 'Cinzel', serif;
+}
+
+.inverse {
+  color: #b9bfca;
+  background-color: #282D35
+}
+
+.inverse .remark-slide-number {
+  color: #fff;
+}
+
+.remark-code-line-highlighted {
+  color: #D55E00FF;
+  background-color: transparent;
+}
+
+.remark-inline-code {
+  color: #b9bfca;
+}
+
+.h2 {
+  font-family: 'Karla'
+}
+
+blockquote{
+  font-size: 24px;
+  width:100%;
+  margin:50px auto;
+  font-family:Karla;
+  font-style:italic;
+  color: #555555;
+  padding:1.2em 30px 1.2em 75px;
+  border-left:8px solid #D55E00FF;
+  line-height:1.6;
+  position: relative;
+  background: #fffff0;
+}
+
+blockquote::before{
+  font-family:Arial;
+  content: "\201C";
+  color:#D55E00FF;
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+blockquote::after{
+  content: '';
+}
+
+blockquote span{
+  display:block;
+  color:#D55E00FF;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1em;
+}
+
+.hljs-solarized-light .hljs {
+  background-color: #fffff0;¨
+}
+```
 
 # `r rmarkdown::metadata$title`
 
-### `r rmarkdown::metadata$author`
+2020
 
-.footnote[
+`r rmarkdown::metadata$author`
 
-]
+<br>
+
+Slides: [bit.ly/zenrpkgs](http://bit.ly/zenrpkgs)
 
 ---
 class: inverse, center, middle
@@ -46,11 +171,12 @@ class: inverse, center, middle
 
 # Me pueden encontrar...
 
-<a href="mailto:gcabrerag@fen.uchile.cl"><i class="fa fa-paper-plane fa-fw"></i>&nbsp;gcabrerag@fen.uchile.cl</a><br>
-<a href="https://gcabrerag.rbind.io/"><i class="fa fa-link fa-fw"></i>&nbsp; gcabrerag.rbind.io</a><br>
-<a href="https://twitter.com/GaboC_g"><i class="fa fa-twitter fa-fw"></i>&nbsp; @GaboC_g</a><br>
-<a href="http://github.com/GaboC_g"><i class="fa fa-github fa-fw"></i>&nbsp; @GaboC_g</a><br>
-<a href="http://pregrado.fen.uchile.cl/"><i class="fa fa-map-marker fa-fw"></i>&nbsp; Facultad de Economía & Negocios, Universidad de Chile </a>
+<a href="mailto:gcabrerag@fen.uchile.cl"><i class="fa fa-paper-plane fa-fw" style="font-size:20px;"></i>&nbsp;gcabrerag@fen.uchile.cl</a><br>
+<a href="https://gcabrerag.rbind.io/"><i class="fa fa-link fa-fw" style="font-size:22px;"></i>&nbsp;gcabrerag.rbind.io</a><br>
+<a href="https://twitter.com/GaboC_g"><i class="fa fa-twitter fa-fw" style="color:#00acee;"></i>&nbsp;@GaboC_g</a><br>
+<a href="http://github.com/GaboCg"><i class="fa fa-github fa-fw" style="color:#ffffff;"></i>&nbsp;GaboCg</a><br>
+<a href="http://pregrado.fen.uchile.cl/"><i class="fa fa-map-marker fa-fw"></i>&nbsp;Facultad de Economía & Negocios, Universidad de Chile </a>
+
 ---
 class: middle
 
@@ -67,7 +193,25 @@ class: center, inverse, middle
 
 # Syllabus
 ---
-# Información
+# Información del Curso
+ 
+1. Cátedra<sup>1</sup>
+
+    * &nbsp; `r fa("landmark", fill = "steelblue")` P-101 (P-101)
+    
+    * &nbsp; `r fa("calendar-alt", fill = "steelblue")` Lun, Mie 09:30 - 10:50 (Mar, Jue 11:00 - 12:20)
+
+2. Ayudantía 
+    
+    * &nbsp; `r fa("landmark", fill = "steelblue")` H-101 (P-101)
+    
+    * &nbsp; `r fa("calendar-alt", fill = "steelblue")` Jue 08:00 - 09:20 (Vie 12:30 - 13:50)
+
+.footnote[
+
+[1] Entre paréntesis la segunda sección
+
+]
 
 ---
 # Descripción
@@ -134,7 +278,7 @@ pie <- git_data %>%
        head(5)
 ```
 
-```{r, fig.width=10, fig.height=10}
+```{r, echo = FALSE, fig.width=10, fig.height=10}
 pie %>% 
   hchart(type = "pie", hcaes(x = "Language", y = "n"), colorByPoint = TRUE, name = "Repositorios")
 ```

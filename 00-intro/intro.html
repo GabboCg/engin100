@@ -3,7 +3,13 @@
   <head>
     <title>Aplicaciones de Manejo de Datos</title>
     <meta charset="utf-8" />
-    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <meta name="author" content="Gabriel Cabrera G." />
+    <meta name="date" content="2020-03-03" />
+    <link href="libs/animate.css-xaringan/animate.fade.css" rel="stylesheet" />
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <link href="libs/text-poster/text-poster.css" rel="stylesheet" />
+    <script src="libs/text-poster/text-poster.js"></script>
+    <script src="libs/text-poster/text-poster-init.js"></script>
     <script src="libs/htmlwidgets/htmlwidgets.js"></script>
     <script src="libs/jquery/jquery.min.js"></script>
     <script src="libs/proj4js/proj4.js"></script>
@@ -49,27 +55,130 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     
     <script src="https://use.fontawesome.com/5235085b15.js"></script>
-    <link rel="stylesheet" href="css/my-theme.css" type="text/css" />
-    <link rel="stylesheet" href="css/my-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 
+class: center middle hide-count
+background-color: #fffff0
+background-position: left
+
+&lt;link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive|Karla|Montserrat|Open+Sans|Quattrocento|Raleway&amp;display=swap" rel="stylesheet"&gt;
 
 
 
-class: title-slide, top, left
-background-image: url(img/esteban-lopez-482075-unsplash.jpg)
-background-size: cover
 
+
+
+
+&lt;style type="text/css"&gt;
+a, a &gt; code {
+  color: #D55E00FF;
+  text-decoration: none;
+}
+
+em {
+  color: #D55E00FF;
+  font-style: normal;
+}
+
+del {
+  color: #E5E5E5;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.inverse del {
+  color: #6C7B7F;
+}
+
+.bg-white-o90{
+   background-color: rgba(255, 255, 255, 0.9);
+}
+
+.large { font-size: 175% }
+
+.hide-count .remark-slide-number {
+  display: none;
+}
+
+.text-poster {
+	font-family: 'Cinzel', serif;
+}
+
+.inverse {
+  color: #b9bfca;
+  background-color: #282D35
+}
+
+.inverse .remark-slide-number {
+  color: #fff;
+}
+
+.remark-code-line-highlighted {
+  color: #D55E00FF;
+  background-color: transparent;
+}
+
+.remark-inline-code {
+  color: #b9bfca;
+}
+
+.h2 {
+  font-family: 'Karla'
+}
+
+blockquote{
+  font-size: 24px;
+  width:100%;
+  margin:50px auto;
+  font-family:Karla;
+  font-style:italic;
+  color: #555555;
+  padding:1.2em 30px 1.2em 75px;
+  border-left:8px solid #D55E00FF;
+  line-height:1.6;
+  position: relative;
+  background: #fffff0;
+}
+
+blockquote::before{
+  font-family:Arial;
+  content: "\201C";
+  color:#D55E00FF;
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+blockquote::after{
+  content: '';
+}
+
+blockquote span{
+  display:block;
+  color:#D55E00FF;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1em;
+}
+
+.hljs-solarized-light .hljs {
+  background-color: #fffff0;¨
+}
+&lt;/style&gt;
 
 # Aplicaciones de Manejo de Datos
 
-### &lt;p style="font-size:30px;color:#ffffff;text-shadow:2px 2px 2px #000;"&gt; Gabriel Cabrera G. &lt;br&gt; Universidad de Chile&lt;/p&gt;
+2020
 
-.footnote[
+Gabriel Cabrera G.
 
-]
+&lt;br&gt;
+
+Slides: [bit.ly/zenrpkgs](http://bit.ly/zenrpkgs)
 
 ---
 class: inverse, center, middle
@@ -78,11 +187,12 @@ class: inverse, center, middle
 
 # Me pueden encontrar...
 
-&lt;a href="mailto:gcabrerag@fen.uchile.cl"&gt;&lt;i class="fa fa-paper-plane fa-fw"&gt;&lt;/i&gt;&amp;nbsp;gcabrerag@fen.uchile.cl&lt;/a&gt;&lt;br&gt;
-&lt;a href="https://gcabrerag.rbind.io/"&gt;&lt;i class="fa fa-link fa-fw"&gt;&lt;/i&gt;&amp;nbsp; gcabrerag.rbind.io&lt;/a&gt;&lt;br&gt;
-&lt;a href="https://twitter.com/GaboC_g"&gt;&lt;i class="fa fa-twitter fa-fw"&gt;&lt;/i&gt;&amp;nbsp; @GaboC_g&lt;/a&gt;&lt;br&gt;
-&lt;a href="http://github.com/GaboC_g"&gt;&lt;i class="fa fa-github fa-fw"&gt;&lt;/i&gt;&amp;nbsp; @GaboC_g&lt;/a&gt;&lt;br&gt;
-&lt;a href="http://pregrado.fen.uchile.cl/"&gt;&lt;i class="fa fa-map-marker fa-fw"&gt;&lt;/i&gt;&amp;nbsp; Facultad de Economía &amp; Negocios, Universidad de Chile &lt;/a&gt;
+&lt;a href="mailto:gcabrerag@fen.uchile.cl"&gt;&lt;i class="fa fa-paper-plane fa-fw" style="font-size:20px;"&gt;&lt;/i&gt;&amp;nbsp;gcabrerag@fen.uchile.cl&lt;/a&gt;&lt;br&gt;
+&lt;a href="https://gcabrerag.rbind.io/"&gt;&lt;i class="fa fa-link fa-fw" style="font-size:22px;"&gt;&lt;/i&gt;&amp;nbsp;gcabrerag.rbind.io&lt;/a&gt;&lt;br&gt;
+&lt;a href="https://twitter.com/GaboC_g"&gt;&lt;i class="fa fa-twitter fa-fw" style="color:#00acee;"&gt;&lt;/i&gt;&amp;nbsp;@GaboC_g&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://github.com/GaboCg"&gt;&lt;i class="fa fa-github fa-fw" style="color:#ffffff;"&gt;&lt;/i&gt;&amp;nbsp;GaboCg&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://pregrado.fen.uchile.cl/"&gt;&lt;i class="fa fa-map-marker fa-fw"&gt;&lt;/i&gt;&amp;nbsp;Facultad de Economía &amp; Negocios, Universidad de Chile &lt;/a&gt;
+
 ---
 class: middle
 
@@ -99,7 +209,25 @@ class: center, inverse, middle
 
 # Syllabus
 ---
-# Información
+# Información del Curso
+ 
+1. Cátedra&lt;sup&gt;1&lt;/sup&gt;
+
+    * &amp;nbsp; &lt;svg style="height:0.8em;top:.04em;position:relative;fill:steelblue;" viewBox="0 0 512 512"&gt;&lt;path d="M501.62 92.11L267.24 2.04a31.958 31.958 0 0 0-22.47 0L10.38 92.11A16.001 16.001 0 0 0 0 107.09V144c0 8.84 7.16 16 16 16h480c8.84 0 16-7.16 16-16v-36.91c0-6.67-4.14-12.64-10.38-14.98zM64 192v160H48c-8.84 0-16 7.16-16 16v48h448v-48c0-8.84-7.16-16-16-16h-16V192h-64v160h-96V192h-64v160h-96V192H64zm432 256H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h480c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z"/&gt;&lt;/svg&gt; P-101 (P-101)
+    
+    * &amp;nbsp; &lt;svg style="height:0.8em;top:.04em;position:relative;fill:steelblue;" viewBox="0 0 448 512"&gt;&lt;path d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm320-196c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM192 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM64 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"/&gt;&lt;/svg&gt; Lun, Mie 09:30 - 10:50 (Mar, Jue 11:00 - 12:20)
+
+2. Ayudantía 
+    
+    * &amp;nbsp; &lt;svg style="height:0.8em;top:.04em;position:relative;fill:steelblue;" viewBox="0 0 512 512"&gt;&lt;path d="M501.62 92.11L267.24 2.04a31.958 31.958 0 0 0-22.47 0L10.38 92.11A16.001 16.001 0 0 0 0 107.09V144c0 8.84 7.16 16 16 16h480c8.84 0 16-7.16 16-16v-36.91c0-6.67-4.14-12.64-10.38-14.98zM64 192v160H48c-8.84 0-16 7.16-16 16v48h448v-48c0-8.84-7.16-16-16-16h-16V192h-64v160h-96V192h-64v160h-96V192H64zm432 256H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h480c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z"/&gt;&lt;/svg&gt; H-101 (P-101)
+    
+    * &amp;nbsp; &lt;svg style="height:0.8em;top:.04em;position:relative;fill:steelblue;" viewBox="0 0 448 512"&gt;&lt;path d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm320-196c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM192 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM64 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"/&gt;&lt;/svg&gt; Jue 08:00 - 09:20 (Vie 12:30 - 13:50)
+
+.footnote[
+
+[1] Entre paréntesis la segunda sección
+
+]
 
 ---
 # Descripción
@@ -130,16 +258,16 @@ en una galaxia no tan,&lt;br&gt; tan lejana...
 
 
 
-<div id="htmlwidget-179946b074f5522efa99" style="width:100%;height:500px;" class="highchart html-widget"></div>
-<script type="application/json" data-for="htmlwidget-179946b074f5522efa99">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":"Nº Repositorios"},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"group":"group","data":[{"Language":"JavaScript","n":338,"y":338,"name":"JavaScript"},{"Language":"Java","n":67,"y":67,"name":"Java"},{"Language":"Python","n":63,"y":63,"name":"Python"},{"Language":"Ruby","n":44,"y":44,"name":"Ruby"},{"Language":"Objective-C","n":43,"y":43,"name":"Objective-C"},{"Language":"Go","n":39,"y":39,"name":"Go"},{"Language":"HTML","n":34,"y":34,"name":"HTML"},{"Language":"CSS","n":30,"y":30,"name":"CSS"},{"Language":"C++","n":28,"y":28,"name":"C++"},{"Language":"Swift","n":28,"y":28,"name":"Swift"},{"Language":"C","n":26,"y":26,"name":"C"},{"Language":"PHP","n":23,"y":23,"name":"PHP"},{"Language":"Shell","n":20,"y":20,"name":"Shell"},{"Language":"TypeScript","n":15,"y":15,"name":"TypeScript"},{"Language":"Vim script","n":14,"y":14,"name":"Vim script"},{"Language":"C#","n":9,"y":9,"name":"C#"},{"Language":"CoffeeScript","n":7,"y":7,"name":"CoffeeScript"},{"Language":"Vue","n":5,"y":5,"name":"Vue"},{"Language":"Scala","n":5,"y":5,"name":"Scala"},{"Language":"Lua","n":4,"y":4,"name":"Lua"},{"Language":"Objective-C++","n":3,"y":3,"name":"Objective-C++"},{"Language":"Clojure","n":3,"y":3,"name":"Clojure"},{"Language":"Jupyter Notebook","n":3,"y":3,"name":"Jupyter Notebook"},{"Language":"TeX","n":3,"y":3,"name":"TeX"},{"Language":"Elixir","n":3,"y":3,"name":"Elixir"},{"Language":"Haskell","n":3,"y":3,"name":"Haskell"},{"Language":"Rust","n":2,"y":2,"name":"Rust"},{"Language":"OCaml","n":2,"y":2,"name":"OCaml"},{"Language":"PowerShell","n":2,"y":2,"name":"PowerShell"},{"Language":"Perl","n":2,"y":2,"name":"Perl"},{"Language":"Assembly","n":1,"y":1,"name":"Assembly"},{"Language":"Rascal","n":1,"y":1,"name":"Rascal"},{"Language":"Emacs Lisp","n":1,"y":1,"name":"Emacs Lisp"},{"Language":"Batchfile","n":1,"y":1,"name":"Batchfile"},{"Language":"Matlab","n":1,"y":1,"name":"Matlab"},{"Language":"PureBasic","n":1,"y":1,"name":"PureBasic"},{"Language":"Julia","n":1,"y":1,"name":"Julia"},{"Language":"Crystal","n":1,"y":1,"name":"Crystal"},{"Language":"Kotlin","n":1,"y":1,"name":"Kotlin"}],"type":"column","colorByPoint":true,"name":"Repositorios"}],"xAxis":{"type":"category","title":{"text":""}}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-5dafc95654a271513a83" style="width:100%;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5dafc95654a271513a83">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":"Nº Repositorios"},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"group":"group","data":[{"Language":"JavaScript","n":338,"y":338,"name":"JavaScript"},{"Language":"Java","n":67,"y":67,"name":"Java"},{"Language":"Python","n":63,"y":63,"name":"Python"},{"Language":"Ruby","n":44,"y":44,"name":"Ruby"},{"Language":"Objective-C","n":43,"y":43,"name":"Objective-C"},{"Language":"Go","n":39,"y":39,"name":"Go"},{"Language":"HTML","n":34,"y":34,"name":"HTML"},{"Language":"CSS","n":30,"y":30,"name":"CSS"},{"Language":"C++","n":28,"y":28,"name":"C++"},{"Language":"Swift","n":28,"y":28,"name":"Swift"},{"Language":"C","n":26,"y":26,"name":"C"},{"Language":"PHP","n":23,"y":23,"name":"PHP"},{"Language":"Shell","n":20,"y":20,"name":"Shell"},{"Language":"TypeScript","n":15,"y":15,"name":"TypeScript"},{"Language":"Vim script","n":14,"y":14,"name":"Vim script"},{"Language":"C#","n":9,"y":9,"name":"C#"},{"Language":"CoffeeScript","n":7,"y":7,"name":"CoffeeScript"},{"Language":"Vue","n":5,"y":5,"name":"Vue"},{"Language":"Scala","n":5,"y":5,"name":"Scala"},{"Language":"Lua","n":4,"y":4,"name":"Lua"},{"Language":"Objective-C++","n":3,"y":3,"name":"Objective-C++"},{"Language":"Clojure","n":3,"y":3,"name":"Clojure"},{"Language":"Jupyter Notebook","n":3,"y":3,"name":"Jupyter Notebook"},{"Language":"TeX","n":3,"y":3,"name":"TeX"},{"Language":"Elixir","n":3,"y":3,"name":"Elixir"},{"Language":"Haskell","n":3,"y":3,"name":"Haskell"},{"Language":"Rust","n":2,"y":2,"name":"Rust"},{"Language":"OCaml","n":2,"y":2,"name":"OCaml"},{"Language":"PowerShell","n":2,"y":2,"name":"PowerShell"},{"Language":"Perl","n":2,"y":2,"name":"Perl"},{"Language":"Assembly","n":1,"y":1,"name":"Assembly"},{"Language":"Rascal","n":1,"y":1,"name":"Rascal"},{"Language":"Emacs Lisp","n":1,"y":1,"name":"Emacs Lisp"},{"Language":"Batchfile","n":1,"y":1,"name":"Batchfile"},{"Language":"Matlab","n":1,"y":1,"name":"Matlab"},{"Language":"PureBasic","n":1,"y":1,"name":"PureBasic"},{"Language":"Julia","n":1,"y":1,"name":"Julia"},{"Language":"Crystal","n":1,"y":1,"name":"Crystal"},{"Language":"Kotlin","n":1,"y":1,"name":"Kotlin"}],"type":"column","colorByPoint":true,"name":"Repositorios"}],"xAxis":{"type":"category","title":{"text":""}}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
 
 ---
 # Top 5 Lenguajes de programación 
 
 
 
-<div id="htmlwidget-df624fbf58e73021fa06" style="width:100%;height:500px;" class="highchart html-widget"></div>
-<script type="application/json" data-for="htmlwidget-df624fbf58e73021fa06">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":"n"},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"group":"group","data":[{"Language":"JavaScript","n":338,"y":338,"name":"JavaScript"},{"Language":"Java","n":67,"y":67,"name":"Java"},{"Language":"Python","n":63,"y":63,"name":"Python"},{"Language":"Ruby","n":44,"y":44,"name":"Ruby"},{"Language":"Objective-C","n":43,"y":43,"name":"Objective-C"}],"type":"pie","colorByPoint":true,"name":"Repositorios"}],"xAxis":{"type":"category","title":{"text":"Language"},"categories":null}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-2cf78362c153956b62f9" style="width:100%;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2cf78362c153956b62f9">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":"n"},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"group":"group","data":[{"Language":"JavaScript","n":338,"y":338,"name":"JavaScript"},{"Language":"Java","n":67,"y":67,"name":"Java"},{"Language":"Python","n":63,"y":63,"name":"Python"},{"Language":"Ruby","n":44,"y":44,"name":"Ruby"},{"Language":"Objective-C","n":43,"y":43,"name":"Objective-C"}],"type":"pie","colorByPoint":true,"name":"Repositorios"}],"xAxis":{"type":"category","title":{"text":"Language"},"categories":null}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
 
 ---
 background-image: url(img/adi-goldstein-mDinBvq1Sfg-unsplash.jpg)
@@ -149,10 +277,11 @@ background-size: cover
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script src="https://platform.twitter.com/widgets.js"></script>
 <script>var slideshow = remark.create({
+"slideNumberFormat": "%current%/%total%",
 "highlightStyle": "solarized-light",
 "highlightLines": true,
-"countIncrementalSlides": false,
-"ratio": "16:9"
+"ratio": "16:9",
+"countIncrementalSlides": true
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
