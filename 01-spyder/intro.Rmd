@@ -156,10 +156,6 @@ blockquote span{
 .hljs-solarized-light .hljs {
   background-color: #fffff0;¨
 }
-
-iframe {
-  border: 3px solid #D55E00FF;
-}
 ```
 
 <br>
@@ -227,18 +223,7 @@ class: center, inverse, middle
 ---
 # Descripción
 
-Aplicación y desarrollo de herramientas de almacenamiento, proceso y manejo de datos empresariales utilizando hojas de cálculo Excel y lenguaje de programación Python `r emo::ji("metal")`.
-
-.pull-left[
-```{r echo=FALSE, out.height=200, out.width= 200, fig.align='center'}
-knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/8/86/Microsoft_Excel_2013_logo.svg")
-```
-]
-
-.pull-right[
-```{r echo=FALSE, out.height=200, out.width= 200, fig.align='center'}
-knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg")
-```
+.pull-right[Aplicación y desarrollo de herramientas de almacenamiento, proceso y manejo de datos empresariales utilizando hojas de cálculo Excel y lenguaje de programación Python `r emo::ji("metal")`.
 ]
 
 ---
@@ -270,27 +255,16 @@ en una galaxia no tan,<br> tan lejana...
 </span>
 
 ---
-class: middle
 
-# <small><small> Exactamente en la decada de los 90, </small></small> <br> <small><small> cuando </small></small> Guido van Rossum </small></small>  <small><small> creo </small></small>...</small></small> <br>  Python... <br> <small><small> inspirado en el grupo de cómicos ingleses ...</small></small>  Monty Python.
 
----
-background-image: url(img/guido-van-rossum.jpg)
+* Python es un lenguaje de programación creado por Guido van Rossuma principios de los años 90 cuyo nombre está inspirado en el grupo de cómicos ingleses “MontyPython”.
 
+* Una de las ventajas principales de aprender Python es la posibilidad de crear un código con gran legibilidad, que ahorra tiempo y recursos, lo que facilita su comprensión e implementación.
 
 ---
 # Material Audiovisual `r fa("youtube", fill = "red")`
 
-.center[
-<iframe width="800" height="450" src="https://www.youtube.com/embed/J0Aq44Pze-w" frameborder="5"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-]
 
----
-# Monty Python And The Holy Grail ⚔
-
-.center[
-<iframe width="800" height="450" src="https://www.youtube.com/embed/dXccErzUM2g" frameborder="5"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-]
 
 ---
 # Lenguajes de programación 
@@ -310,7 +284,7 @@ chart <- git_data %>%
             filter(row_number(Language) == 1) 
 ```
 
-```{r, echo = FALSE, eval = TRUE, warning=FALSE, message=FALSE, fig.align='center'}
+```{r, echo = FALSE, eval = TRUE, warning=FALSE, message=FALSE}
 chart %>% 
   hchart(type = "column", hcaes(x = "Language", y = "n"), colorByPoint = TRUE, name = "Repositorios") %>% 
   hc_xAxis(title = list(text = "")) %>% 
@@ -333,15 +307,10 @@ pie <- git_data %>%
        head(5)
 ```
 
-```{r, echo = FALSE, fig.width=20, fig.height=10, fig.align='center'}
+```{r, echo = FALSE, fig.width=10, fig.height=10}
 pie %>% 
   hchart(type = "pie", hcaes(x = "Language", y = "n"), colorByPoint = TRUE, name = "Repositorios")
 ```
-
----
-class: center, inverse, middle
-
-# Nunca olviden que ...
 
 ---
 background-image: url(img/adi-goldstein-mDinBvq1Sfg-unsplash.jpg)
